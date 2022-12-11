@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="history.css">
+    <!-- <script src="scripts/image.js" defer></script> -->
+
+    <title>HTMLs Historia & DOM</title>
+</head>
+
+<body class="container">
+    <header class="header">
+        <h1 class="header-caption">HTMLs Historia & Dokumentobjektmodellen</h1>
+        <nav class="primary-navigation">
+            <ul class="primary-navigation__links">
+                <li><a href="/index.html" class="nav-link">Hem</a></li>
+                <li><a href="#" class="nav-link">Historia</a></li>
+                <li><a href="#dom" class="nav-link">Hur funkar det?</a></li>
+                <li><a href="#" class="nav-link">Om</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="main-content__history">
+            <header class="header-html">
+                <h2>HTMLs Historia</h2>
+            </header>
+            <p>
+                Under de första fem åren (1990-1995) gick HTML igenom ett antal revisioner och fick ett antal tillägg,
+                främst värd först på CERN och sedan på IETF.
+            </p>
+            <div class="img-wrapper">
+                <img class="inline-image | inline-image-medium" src="/Images/html.png" alt="all the html versions">
+            </div>
+            <p>
+                Med skapandet av W3C ändrades HTMLs utvecklingsplats igen. Ett första misslyckat försök att utöka HTML
+                1995, känd som HTML 3.0, gjorde sedan plats för en mer praktisk metod känd som HTML 3.2, som slutfördes
+                1997. HTML4 följde snabbt senare samma år.
+            </p>
+            <p>
+                Året därpå beslutade W3C-medlemskapet att sluta utveckla HTML och istället börja arbeta på en
+                XML-baserad motsvarighet, kallad XHTML. Detta försök började med en omformulering av HTML4 i XML, känd
+                som XHTML 1.0, som inte lade till några nya funktioner förutom den nya serialiseringen, och som
+                slutfördes 2000. Efter XHTML 1.0 vändes W3C:s fokus till att göra det lättare för andra arbetsgrupper
+                att utöka XHTML, under flaggan XHTML Modularization. Samtidigt med detta arbetade W3C också på ett nytt
+                språk som inte var kompatibelt med de tidigare HTML- och XHTML-språken, kallar det XHTML2.
+            </p>
+            <p>
+                Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar av API:et för HTML utvecklat av
+                webbläsarleverantörer och publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core och DOM
+                Level 2 HTML (med start 2000 och som kulminerade 2003). Dessa ansträngningar försvann sedan, med några
+                DOM nivå 3-specifikationer publicerade 2004 men arbetsgruppen stängdes innan alla nivå 3-utkast var
+                färdiga.
+            </p>
+            <div class="img-wrapper">
+                <img class="inline-image | inline-image-small" src="/Images/htmllogo.png" alt="html5 logo">
+            </div>
+        </section>
+        <section id="dom" class="main-content__dom">
+            <header class="header-dom">
+                <h2>Hur fungerar webben och vad är DOM?</h2>
+            </header>
+            <p>
+                DOM, eller Document Object Model, är ett programmeringsgränssnitt för HTML- och XML-dokument. Det låter
+                utvecklare manipulera och hantera innehållet i en webbsida på ett strukturerat sätt. T.ex. kan man
+                använda DOM för att ändra stilen på ett element på en webbsida, eller för att lägga till nya element.
+                DOM fungerar som en slags "trädstruktur" av alla element i ett dokument, vilket gör det enkelt att
+                navigera och ändra på dessa element.
+            </p>
+            <p>
+                Detaljerat sett är DOM en abstraktion av ett HTML- eller XML-dokument, där varje element i dokumentet
+                representeras som en objektnode i en trädstruktur. Varje objektnode har egenskaper och metoder som
+                utvecklare kan använda för att manipulera innehållet i dokumentet.
+
+                Så när en webbläsare läser in en HTML-sida, skapar den ett DOM-objekt som en representation av sidans
+                innehåll. Utvecklare kan sedan använda JavaScript eller ett annat programmeringsspråk för att interagera
+                med DOM-objektet och på så sätt ändra sidans innehåll.
+
+                Till exempel kan man använda DOM för att lägga till ett nytt element till en webbsida, ändra stilen på
+                ett befintligt element, eller ta bort ett element helt. Detta kan göras genom att navigera i
+                trädstrukturen och anropa olika metoder på objektnode-objekten.
+
+                I korthet är DOM ett sätt att strukturera och manipulera innehållet i en webbsida på ett programmerbart
+                sätt. Det gör det möjligt för utvecklare att skapa dynamiska och interaktiva webbplatser.
+            </p>
+            <div class="img-wrapper">
+                <img class="inline-image | inline-image-medium" src="/Images/DOMbild.png" alt="document object model schematic">
+            </div>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <div></div>
+        <div>
+            <div class="footer-navigation">
+                <li><a class="nav-link" href="#">Tillbaka till toppen</a></li>
+                <li><a class="nav-link" href="/Portfolio/index.html">Om mig</a></li>
+                <li><a class="nav-link"
+                        href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRpclbjtxLvvHvlCKXGFnXrbPdHrPvvZwVbHzLdjdnpTMvJXBlnjTDFsGXcPdmXpzKCQcNb">Kontakta
+                        mig</a></li>
+            </div>
+        </div>
+        <div>
+            <p class="footer-text">Copyright &copy; 2022 Morris Berglin - NTI Gymnasiet Nacka Strand
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -12,13 +12,13 @@
     --fg-clr-white: #fff;
     
     --bg-clr-header: rgb(151, 28, 28);
-    --bg-clr-blue: rgb(253, 208, 208);
+    --bg-clr-lightpink: rgb(253, 208, 208);
     --bg-clr-offwhite: whitesmoke;
 
     --line-clr-black: #111;
 
     --img-width-small: 150px;
-    --img-width-medium: 300px;
+    --img-width-medium: 350px;
     --img-width-full: 100%;
 
     --padding-tight: .4rem;
@@ -26,6 +26,12 @@
 
     --ft-weight-400: 400;
     --ft-weight-700: 700;
+
+    --bg-clr: #e0e0e0;
+}
+
+body {
+    background: var(--bg-clr);
 }
 
 p{
@@ -52,9 +58,20 @@ h2{
     align-items: center;
 }
 
+.container {
+    display: grid;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
 .primary-navigation  {
     width: 100%;
-    background: var(--bg-clr-blue);
+    background: var(--bg-clr-lightpink);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .primary-navigation__links {
@@ -65,11 +82,28 @@ h2{
     list-style: none;;
 }
 
-.main-content {
+.main-content__history{
     /* width: 60%; */
-    background: var(--bg-clr-offwhite);
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-inline-start: 5rem;
 } 
+
+.main-content__dom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-inline-start: 5rem;
+}
+
+.main-content__laws{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-inline-start: 5rem;
+}
+
 
 .footer {
     background: var(--bg-clr-blue);
@@ -80,6 +114,7 @@ h2{
 
 .inline-image {
     object-fit: cover;
+    
 }
 
 .inline-image-small {
@@ -102,9 +137,15 @@ h2{
     color: var(--fg-clr-white);
 }
 
+h2{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 p{
     padding: var(--padding-tight);
     color: var(--fg-clr-gray);
+    font-size: 1.5rem;
 }
 
 /* link styling */
@@ -118,18 +159,47 @@ a {
     font-weight: bold;
     font-size: 1.3rem;
     list-style: none;
+    
 }
 
-@keyframes zoom{
-    0% {
-        transform: scale(1)
-    }
-
-    100% {
-        transform: scale(1.3)
-    }
+button {
+ padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
 }
 
+button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: rgb(151, 28, 28);
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+button:hover {
+ color: #e8e8e8;
+}
+
+button:hover::before {
+ width: 100%;
+}
 
 li:hover {
     animation: zoom 0.5s infinite alternate
@@ -156,3 +226,73 @@ li:hover {
     display: grid;
     place-items: center;
 }
+
+@media (max-width: 35em){
+    .main-content__history{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-inline-start: 5rem;
+    } 
+    
+    .main-content__dom{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-inline-start: 5rem;
+    }
+    
+    .main-content__laws{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-inline-start: 5rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    font-size: 1em;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: var(--bg-clr-lightpink);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--bg-clr-header);
+  }
+  
+  /* Style the container/contact section */
+  .message-box {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+  }

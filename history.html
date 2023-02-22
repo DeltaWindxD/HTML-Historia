@@ -19,33 +19,31 @@
 
 <body class="container">
     <header class="header">
-        <h1 class="header-caption">HTMLs Historia & Dokumentobjektmodellen</h1>
-        <nav class="primary-navigation">
-            <ul class="primary-navigation__links">
-                <li><a href="/index.html" class="nav-link">Hem</a></li>
-                <li><a href="#" class="nav-link">Historia</a></li>
-                <li><a href="#dom" class="nav-link">Hur funkar det?</a></li>
-                <li><a href="#" class="nav-link">Om</a></li>
-            </ul>
-        </nav>
+        <h1 class="header-caption">HTMLs Historia & Dokumentobjektmodellen</h1> 
     </header>
+    <nav class="primary-navigation">
+        <ul class="primary-navigation__links">
+            <button><a href=Portfolio/index.html class="nav-link">Hem</a></button>
+            <button><a href="#" class="nav-link">Historia</a></button>
+            <button><a href="#dom" class="nav-link">Hur funkar det?</a></button>
+            <button><a href="#" class="nav-link">Om</a></button>
+        </ul>
+    </nav>
     <main class="main-content">
         <section class="main-content__history">
-            <header class="header-html">
+            <header class="header-html grid-col-span-2">
                 <h2>HTMLs Historia</h2>
             </header>
             <p>
                 Under de första fem åren (1990-1995) gick HTML igenom ett antal revisioner och fick ett antal tillägg,
                 främst värd först på CERN och sedan på IETF.
-            </p>
-            <div class="img-wrapper">
-                <img class="inline-image | inline-image-medium" src="/Images/html.png" alt="all the html versions">
-            </div>
-            <p>
                 Med skapandet av W3C ändrades HTMLs utvecklingsplats igen. Ett första misslyckat försök att utöka HTML
                 1995, känd som HTML 3.0, gjorde sedan plats för en mer praktisk metod känd som HTML 3.2, som slutfördes
                 1997. HTML4 följde snabbt senare samma år.
             </p>
+            <div class="img-wrapper">
+                <img class="inline-image | inline-image-medium" src="/Images/html.png" alt="all the html versions">
+            </div>
             <p>
                 Året därpå beslutade W3C-medlemskapet att sluta utveckla HTML och istället börja arbeta på en
                 XML-baserad motsvarighet, kallad XHTML. Detta försök började med en omformulering av HTML4 i XML, känd
@@ -54,6 +52,9 @@
                 att utöka XHTML, under flaggan XHTML Modularization. Samtidigt med detta arbetade W3C också på ett nytt
                 språk som inte var kompatibelt med de tidigare HTML- och XHTML-språken, kallar det XHTML2.
             </p>
+            <div class="img-wrapper">
+                <img class="inline-image | inline-image-small" src="/Images/htmllogo.png" alt="html5 logo">
+            </div>
             <p>
                 Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar av API:et för HTML utvecklat av
                 webbläsarleverantörer och publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core och DOM
@@ -62,11 +63,12 @@
                 färdiga.
             </p>
             <div class="img-wrapper">
-                <img class="inline-image | inline-image-small" src="/Images/htmllogo.png" alt="html5 logo">
+                <img class="inline-image | inline-image-medium" src="/Images/dom2.png" alt="DOM-bild">
             </div>
         </section>
+        
         <section id="dom" class="main-content__dom">
-            <header class="header-dom">
+            <header class="header-dom grid-col-span-2">
                 <h2>Hur fungerar webben och vad är DOM?</h2>
             </header>
             <p>
@@ -76,6 +78,9 @@
                 DOM fungerar som en slags "trädstruktur" av alla element i ett dokument, vilket gör det enkelt att
                 navigera och ändra på dessa element.
             </p>
+            <div class="img-wrapper">
+                <img class="inline-image | inline-image-medium" src="\Images\DOMbild.png" alt="DOM-bild">
+            </div>
             <p>
                 Detaljerat sett är DOM en abstraktion av ett HTML- eller XML-dokument, där varje element i dokumentet
                 representeras som en objektnode i en trädstruktur. Varje objektnode har egenskaper och metoder som
@@ -93,20 +98,66 @@
                 sätt. Det gör det möjligt för utvecklare att skapa dynamiska och interaktiva webbplatser.
             </p>
             <div class="img-wrapper">
-                <img class="inline-image | inline-image-medium" src="/Images/DOMbild.png" alt="document object model schematic">
+                <img class="inline-image | inline-image-medium" src="\Images\java.png" alt="JavaScript ikon">
             </div>
-            
+        </section>
+        <section id="laws" class="main-content__laws">
+            <header class="header-laws grid-col-span-2">
+                <h2>Lagar om digitalisering och skydd av personlig data</h2>
+            </header>
+                <p>
+                    Etiken och lagarna kring digitalisering och skydd av personlig data är viktiga för att skydda
+                    enskilda individers rättigheter och integritet när det gäller deras personliga information. Dessa
+                    lagar och etiska principer syftar till att säkerställa att individers personliga data hanteras på
+                    ett säkert och ansvarsfullt sätt av företag och organisationer.
+
+                    En viktig lag i detta sammanhang är General Data Protection Regulation (GDPR) som trädde i kraft i
+                    EU 2018. Den kräver att företag måste informera individer om hur deras data samlas in, lagras och
+                    används, och ger individer rätt att begära att deras data raderas eller ändras. GDPR innebär också
+                    att företag måste ha rätt processer på plats för att hantera databrister och rapportera dem till
+                    myndigheter och berörda individer.
+                
+                    Det finns också lokala lagar om skydd av personuppgifter i många länder, som exempelvis
+                    Personuppgiftslagen (PUL) i Sverige, som är liknande EU:s GDPR.
+                </p>
+                <div class="img-wrapper">
+                    <img class="inline-image | inline-image-medium" src="\Images\GDPR.png" alt="DOM-bild">
+                </div>
+                <p>
+                    Etiskt sett finns det många frågor som diskuteras när det gäller digitalisering och skydd av
+                    personlig data. Exempel på detta är vilken typ av data som är acceptabelt att samla in och för
+                    vilket syfte, hur företag ska hantera och skydda personlig information och hur individers
+                    rättigheter ska beaktas när det gäller användning av deras data. Det är viktigt att företag och
+                    organisationer har tydliga etiska riktlinjer för hantering av personlig data och att de följer
+                    gällande lagar och bestämmelser.
+                </p>
+                <div class="img-wrapper">
+                    <img class="inline-image | inline-image-medium" src="\Images\etik.png" alt="etik-skyltar">
+                </div>
         </section>
     </main>
     <footer class="footer">
-        <div></div>
+        <div class="message-box">
+            <div style="text-align:center">
+              <h2>Kontakta Mig</h2>
+              <p>Skriv här för eventuella frågor eller funderingar:</p>
+            </div>
+            <div class="row">
+                <form action="sentmessage.html">
+                    <label for="fname">Förnamn</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Ditt förnamn..">
+                    <label for="lname">Efternamn</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Ditt efternamn..">
+                    <label for="subject">Meddelande</label>
+                    <textarea id="subject" name="subject" placeholder="Ditt meddelande.." style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                  </form>
+            </div>
+          </div>
         <div>
             <div class="footer-navigation">
                 <li><a class="nav-link" href="#">Tillbaka till toppen</a></li>
                 <li><a class="nav-link" href="/Portfolio/index.html">Om mig</a></li>
-                <li><a class="nav-link"
-                        href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRpclbjtxLvvHvlCKXGFnXrbPdHrPvvZwVbHzLdjdnpTMvJXBlnjTDFsGXcPdmXpzKCQcNb">Kontakta
-                        mig</a></li>
             </div>
         </div>
         <div>

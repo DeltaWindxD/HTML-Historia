@@ -143,13 +143,15 @@
               <p>Skriv här för eventuella frågor eller funderingar:</p>
             </div>
             <div class="row">
-                <form action="sentmessage.html">
-                    <label for="fname">Förnamn</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Ditt förnamn..">
-                    <label for="lname">Efternamn</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Ditt efternamn..">
+                <form action="https://formsubmit.co/morris.berglin@elev.ga.ntig.se" method="POST">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/sentmessage.html">
+                    <input type="hidden" name="_subject" value="New Email Received">
+                    <label for="name">Ditt Namn</label>
+                    <input type="text" id="name" name="name" placeholder="Ditt namn.." required>
+                    <label for="mail">Din mail</label>
+                    <input type="text" id="mail" name="mail" placeholder="Din e-postadress.." required>
                     <label for="subject">Meddelande</label>
-                    <textarea id="subject" name="subject" placeholder="Ditt meddelande.." style="height:170px"></textarea>
+                    <textarea id="subject" name="subject" placeholder="Ditt meddelande.." style="height:170px" required></textarea>
                     <input type="submit" value="Submit">
                   </form>
             </div>
